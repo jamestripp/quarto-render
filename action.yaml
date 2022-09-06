@@ -1,16 +1,16 @@
 name: "Quarto Render"
 branding:
-  icon: 'award'  
-  color: 'blue'
+  icon: "award"
+  color: "blue"
 description: "Renders a repo of documents with Quarto"
 runs:
   using: "composite"
-  steps: 
+  steps:
     - name: "Download Quarto"
       shell: bash
       run: |
         # Hardcoding versions for now to make sure new versions don't break things
-        quarto_version="0.2.232"
+        quarto_version="1.1.189"
         quarto_file_name="quarto-${quarto_version}-linux-amd64.deb"
         quarto_url="https://github.com/quarto-dev/quarto-cli/releases/download/v${quarto_version}/${quarto_file_name}"
 
